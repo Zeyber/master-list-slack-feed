@@ -73,7 +73,7 @@ export function getBrowser(
         width: puppeteer_options.width,
         height: puppeteer_options.height,
       },
-      userDataDir: './puppeteer-session',
+      userDataDir: './puppeteer-slack-session',
     },
   );
 }

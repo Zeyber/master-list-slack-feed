@@ -60,7 +60,7 @@ export class AppService {
 
       this.browser = await getBrowser({
         headless: false,
-        userDataDir: './puppeteer-session',
+        userDataDir: './puppeteer-slack-session',
       });
       this.page = await this.browser.newPage();
       // Disable timeout for slower devices
