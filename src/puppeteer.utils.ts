@@ -64,7 +64,7 @@ export function getBrowser(
   return puppeteer.launch(
     options ?? {
       executablePath: process.env.FACEBOOK_CHROME_PATH,
-      headless: true,
+      headless: false,
       args: [
         ...minimal_args,
         `--window-size=${puppeteer_options.width},${puppeteer_options.height}`,
