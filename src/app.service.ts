@@ -109,7 +109,7 @@ export class AppService {
 
               if ((unread || unreadLink) && !muted) {
                 const threadText: string = await this.page.evaluate(
-                  (el) => el.innerText,
+                  (el: HTMLElement) => el.innerText,
                   thread,
                 );
                 const name = threadText.split('\n')[0];

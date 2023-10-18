@@ -64,7 +64,7 @@ export function getBrowser(
   return puppeteer.launch(
     options ?? {
       executablePath: process.env.FACEBOOK_CHROME_PATH,
-      headless: true,
+      headless: false,
       args: [
         ...minimal_args,
         `--window-size=${puppeteer_options.width},${puppeteer_options.height}`,
@@ -86,7 +86,7 @@ export async function clickButton(
   page: puppeteer.Page = this.page,
 ): Promise<void> {
   await page.waitForXPath(`//button[contains(., '${text}')]`);
-  const button = await page.$x(`//button[contains(., '${text}')]`);
+  const button: any = await page.$x(`//button[contains(., '${text}')]`);
   return button[0].click();
 }
 
@@ -98,6 +98,6 @@ export async function clickLink(
   page: puppeteer.Page = this.page,
 ): Promise<void> {
   await page.waitForXPath(`//a[contains(., '${text}')]`);
-  const link = await page.$x(`//a[contains(., '${text}')]`);
+  const link: any = await page.$x(`//a[contains(., '${text}')]`);
   return link[0].click();
 }
