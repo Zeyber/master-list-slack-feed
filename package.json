@@ -1,6 +1,6 @@
 {
   "name": "@zeyber/master-list-slack-feed",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Master List Feed for Slack Unread Messages",
   "author": "Caine Rotherham",
   "scripts": {
